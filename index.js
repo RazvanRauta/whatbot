@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 import './env.js'
 
 import inquirer from 'inquirer'
@@ -111,7 +112,7 @@ client.on('message', async (message) => {
   // If AI is enabled for this contact.
   if (selectedContacts.includes(message.from)) {
     // Set my name (first name only).
-    const myName = 'A.I.'
+    const myName = client.info.pushname.replace(/ .*/, '')
 
     // Get contact.
     const contact = await message.getContact()
@@ -137,12 +138,15 @@ client.on('message', async (message) => {
     history.forEach(function (item, index) {
       // Get author name
       const name =
-        item.from === message.from ? contactName : 'Me (' + myName + ')'
+        item.from == message.from ? contactName : 'Me (' + myName + ')'
       // Add to prompt.
       if (!prompt.includes(item.body)) {
         prompt += name + ': ' + item.body + '\n'
       }
     })
+
+    // Finalize prompt.
+    prompt += 'Me (' + myName + '):'
 
     // Set typing state.
     chat.sendStateTyping()
@@ -157,7 +161,7 @@ client.on('message', async (message) => {
         stop: '\n'
       })
 
-      const responseText = response.data.choices[0].text.trim() + '[A.I.]'
+      const responseText = response.data.choices[0].text.trim() + '\n[A.I.]'
       // Send reply.
       client.sendMessage(message.from, responseText)
       // Log reply.
