@@ -41,7 +41,7 @@ console.log('Starting WhatsApp client...\n')
 client.on('qr', (qr) => {
   console.clear()
   console.log(
-    '\n1. Open WhatsApp on your phone\n2. Tap Menu or Settings and select WhatsApp Web\n3. Point your phone to this screen to capture the code\n'
+    '\n1. Open WhatsApp on your phone\n2. Tap Menu or the 3 vertical dots and select `Linked Devices`\n3. Press the button `Link a device` and authorize if requested\n4. Point your phone to this screen to capture the QR code from bellow\n'
   )
 
   // Display QR code.

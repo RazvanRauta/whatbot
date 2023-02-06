@@ -56,6 +56,6 @@ The more detail you offer in your prompt, the better your responses will be.
 npm run start
 ```
 
-2. Open WhatsApp on your phone, select 'WhatsApp Web' from the settings menu, then scan the provided QR code.
-3. Choose from the list of recent chats which you would like to activate the bot for. Use space key to select.
-4. Sit back and watch the bot respond automatically to incoming messages from your selected contacts.
+1. Open WhatsApp on your phone, select 'Linked devices' from the Menu, then scan the provided QR code.
+2. Choose from the list of recent chats which you would like to activate the bot for. Use space key to select.
+3. Sit back and watch the bot respond automatically to incoming messages from your selected contacts.
