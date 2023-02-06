@@ -161,7 +161,7 @@ client.on('message', async (message) => {
         stop: '\n'
       })
 
-      const responseText = response.data.choices[0].text.trim() + '\n[A.I.]'
+      const responseText = response.data.choices[0].text.trim() + (process.env.APPEND_SUFFIX ? '\n[A.I.]' : '')
       // Send reply.
       client.sendMessage(message.from, responseText)
       // Log reply.

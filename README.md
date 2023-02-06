@@ -28,7 +28,7 @@ git clone https://github.com/theshanergy/whatbot.git
 npm install
 ```
 
-3. Create an .env file containing your OpenAI secret API key as follows:
+3. Create an .env file (see [.env.sample](./.env.sample)) containing your OpenAI secret API key as follows:
 
 ```sh
 OPENAI_SECRET_KEY="<Secret key>"
