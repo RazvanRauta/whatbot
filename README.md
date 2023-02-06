@@ -12,7 +12,7 @@ This is a basic chat bot for WhatsApp which uses the OpenAI API (GPT-3). It is w
 npm install npm@latest -g
 ```
 
-* API keys from OpenAI at <https://openai.com>.
+* API keys from OpenAI at [Api Keys](https://platform.openai.com/account/api-keys).
 
 ## Installation
 
