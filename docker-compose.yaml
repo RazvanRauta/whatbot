@@ -1,0 +1,12 @@
+version: '3,9'
+services:
+  whatsapp-bot:
+    container_name: whatsapp-bot
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - /app/node_modules
+    env_file:
+      - ./.env
